@@ -1,0 +1,21 @@
+# Butterfree MVP Requirements
+
+- macOS Desktop Tool
+- Load existing Flutter project
+- List Widgets from the Flutter project in a catalog
+- Create new Widget (Dropsource-managed).  One Widget per file.
+- Open specific Widget file (Dropsource-managed only)
+- Define Widget name
+- Define Widget properties (including child/children)
+- Provide an Editor and Canvas with which the user interacts.
+    - Widgets are previewed on the canvas.
+    - Widget properties are defined with static values, or with simple expressions
+        - To start, expressions will not be validated or checked by Butterfree
+    - Refactor Widget
+        - Wrap with
+            - Row
+            - Column
+            - Container
+            - Some other Parent
+        - Extract into new Widget
+    - Display Widget Tree
