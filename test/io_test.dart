@@ -20,6 +20,10 @@ void main() {
     }
   });
 
+  tearDownAll(() async {
+    if (await _tmpTestDir.exists()) await _tmpTestDir.delete(recursive: true);
+  });
+
   test('A user can open a Flutter project from their local filesystem', () {
     fail('Not Implemented');
   });
