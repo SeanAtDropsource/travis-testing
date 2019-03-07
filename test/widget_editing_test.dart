@@ -14,6 +14,7 @@ void main() {
 
   // TODO: How will we handle widgets which don't define properties explicitly named child/children, like an AppBar's "actions" property?
   // Should we also inspect Type information on widget properties to see if they expect Widgets?
+  // This may not actually matter for the MVP since we are solely focusing on "managed" widgets.
   test(
       'Other widgets can be drag-and-dropped into Widgets in the tree which have child/children properties',
       () {});
