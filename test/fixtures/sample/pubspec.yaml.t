@@ -1,14 +1,11 @@
-name: butterfree
-description: A Visual Editor Tool for stateless Flutter widgets.
+name: butterfree_test_lib
+description: A fake project which simulates a Flutter project.
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^0.1.0
-  analyzer: ^0.34.0
-  dart_style: ^1.2.3
-  path: ^1.6.2
 
 dev_dependencies:
   flutter_test:
