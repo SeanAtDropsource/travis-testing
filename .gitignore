@@ -11,3 +11,7 @@ pubspec.lock
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
 doc/api/
+
+# This is a macOS-only app, so no mobile clients.
+ios/
+android/
