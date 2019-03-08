@@ -10,4 +10,4 @@ script:
   - ls -la $TRAVIS_BUILD_DIR
   - ls -la $TRAVIS_BUILD_DIR/../
   - ls -la $TRAVIS_BUILD_DIR/../../
-  - set -o pipefail && xcodebuild --verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty
+  - set -o pipefail && xcodebuild -verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty
