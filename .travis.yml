@@ -15,5 +15,6 @@ deploy:
     secure: yO+FfGhDAW+Z6tx9+oM7V+9DioeA92MBZshOCgufhTCR/2S/iC/dSUPB+zo/iZYvpzIDVhDde4K8EpCt+ukjLIxpCzAQuuP5jCF3tXC2hfBm53eJv6FomUT97n5ywCLoYtOnf6d7ICqWhMj3Uk4l/U/5Mij4NCxpbXQ//uxqf/VMmOgaMWkuNpcDu0b6Z3ZMu7XPxpXbAAuqcuGktHbwZWtYyeFCpT+WZSd9PeFXX8JItL8jtoi7TPmjMw8jWIPv+GK9B7aPCB43gcZQ6TXrCM+D9uEeuUgrPiGW+KV9HOAlgViBNjRXPj4+KVojvtJ9AiE/6IorvYZPUIvhA3sSWYavluLoaMU4mq5TOtPiZQNaGfD14TCRByhmUrJhKATpF8TMkkUMZI6dbocidxKiQDstbifYW/9+L+IxfLBLmjR78IR2LzDGRSo9fBzmub8GdehuDI6MIRH2LzvmmIMViUyMF1YJYdgGrhmW8Khsi25ub/fJAfuyZ5r65sBQFzHxzKtttQqTx4lHrLUzmkuOEL480jtA09HpO1A3aBZhatxTJBEDQr1D3uM6/UjcGRI1HRbndmzJmhYqVo/OwKM7toHXeZ5zlrlVR3ctTezO9kU+PpT9ADXwtKggPKQnRZXXmfhTI/JVaOH5p0Usnpgz5C7IRZoA23mc+tnANrLCv1g=
   file: 'Butterfree.app'
   draft: true
+  skip_cleanup: true
   on:
     repo: SeanAtDropsource/travis-testing
