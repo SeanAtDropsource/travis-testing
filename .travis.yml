@@ -4,11 +4,10 @@ xcode_project: macos_fde/Butterfree.xcodeproj
 xcode_scheme: Butterfree
 
 install:
-  - git clone -b master https://github.com/google/flutter-desktop-embedding $TRAVIS_BUILD_DIR/flutter-desktop-embedding
   - git clone -b master https://github.com/flutter/flutter.git $TRAVIS_BUILD_DIR/../flutter
 
 script:
   - ls -la $TRAVIS_BUILD_DIR
   - ls -la $TRAVIS_BUILD_DIR/../
   - ls -la $TRAVIS_BUILD_DIR/../../
-  - set -o pipefail && xcodebuild -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty
+  - set -o pipefail && xcodebuild --verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty

@@ -355,7 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "FDE_ROOT=\"$PROJECT_DIR\"/../flutter-desktop-embedding\n\"$FDE_ROOT\"/tools/build_flutter_assets \"$PROJECT_DIR\"/..";
+			shellScript = "\"$FDE_ROOT\"/tools/build_flutter_assets \"$PROJECT_DIR\"/..\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
