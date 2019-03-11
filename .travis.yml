@@ -9,8 +9,8 @@ script:
 - set -o pipefail && xcodebuild -verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME
   build | xcpretty
 - ls -la $TRAVIS_BUILD_DIR
-- find $TRAVIS_BUILD_DIR "Butterfree.app"
-- find $TRAVIS_BUILD_DIR "Runner.app"
+- find ~/Library/Developer/Xcode/DerivedData "Butterfree.app" || true
+- find ~/Library/Developer/Xcode/DerivedData "Runner.app" || true
 deploy:
   provider: releases
   api_key:
