@@ -9,6 +9,8 @@ dependencies:
   analyzer: ^0.34.0
   dart_style: ^1.2.3
   path: ^1.6.2
+  file_chooser:
+    path: ../plugins/file_chooser
 
 dev_dependencies:
   flutter_test:
