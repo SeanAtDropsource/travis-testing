@@ -6,16 +6,14 @@ install:
 - git clone -b master https://github.com/flutter/flutter.git $TRAVIS_BUILD_DIR/../flutter
 script:
 - ls -la $TRAVIS_BUILD_DIR
-- set -o pipefail && xcodebuild -verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME CONFIGURATION_BUILD_DIR=/tmp/macos_fde_build/
-  build | xcpretty
+- set -o pipefail && xcodebuild -verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty
 - ls -la $TRAVIS_BUILD_DIR
-- find ~/Library/Developer/Xcode/DerivedData -type d -name "Butterfree.app" || true
-- find /tmp -type d -name "Butterfree.app" || true
+- find ~/Library/Developer/Xcode/DerivedData -type d -name "Butterfree.app"
 deploy:
   provider: releases
   api_key:
     secure: yO+FfGhDAW+Z6tx9+oM7V+9DioeA92MBZshOCgufhTCR/2S/iC/dSUPB+zo/iZYvpzIDVhDde4K8EpCt+ukjLIxpCzAQuuP5jCF3tXC2hfBm53eJv6FomUT97n5ywCLoYtOnf6d7ICqWhMj3Uk4l/U/5Mij4NCxpbXQ//uxqf/VMmOgaMWkuNpcDu0b6Z3ZMu7XPxpXbAAuqcuGktHbwZWtYyeFCpT+WZSd9PeFXX8JItL8jtoi7TPmjMw8jWIPv+GK9B7aPCB43gcZQ6TXrCM+D9uEeuUgrPiGW+KV9HOAlgViBNjRXPj4+KVojvtJ9AiE/6IorvYZPUIvhA3sSWYavluLoaMU4mq5TOtPiZQNaGfD14TCRByhmUrJhKATpF8TMkkUMZI6dbocidxKiQDstbifYW/9+L+IxfLBLmjR78IR2LzDGRSo9fBzmub8GdehuDI6MIRH2LzvmmIMViUyMF1YJYdgGrhmW8Khsi25ub/fJAfuyZ5r65sBQFzHxzKtttQqTx4lHrLUzmkuOEL480jtA09HpO1A3aBZhatxTJBEDQr1D3uM6/UjcGRI1HRbndmzJmhYqVo/OwKM7toHXeZ5zlrlVR3ctTezO9kU+PpT9ADXwtKggPKQnRZXXmfhTI/JVaOH5p0Usnpgz5C7IRZoA23mc+tnANrLCv1g=
-  file: '/tmp/macos_fde_build/Build/Products/Debug/Butterfree.app'
+  file: '$(find ~/Library/Developer/Xcode/DerivedData -type d -name "Butterfree.app")'
   draft: true
   skip_cleanup: true
   on:
