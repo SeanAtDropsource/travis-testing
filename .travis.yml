@@ -6,8 +6,10 @@ install:
 - git clone -b master https://github.com/flutter/flutter.git $TRAVIS_BUILD_DIR/../flutter
 script:
 - set -o pipefail && xcodebuild -verbose -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME build | xcpretty
+- cd $(find ~/Library/Developer/Xcode/DerivedData -type d -name "Butterfree.app")
+- cd ..
+- zip -r $TRAVIS_BUILD_DIR/butterfree.zip Butterfree.app
 - cd $TRAVIS_BUILD_DIR
-- zip -r butterfree.zip $(find ~/Library/Developer/Xcode/DerivedData -type d -name "Butterfree.app")
 deploy:
   provider: releases
   api_key:
